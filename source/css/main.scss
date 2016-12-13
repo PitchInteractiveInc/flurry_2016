@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import 'reset';
+
+body {
+  background: #F6F6F6;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body.animating {
+  .svgContainer {
+    display: none;
+  }
+  button {
+    display: none;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transition: background 1s ease-in-out;
+  .message {
+    position: absolute;
+    width: 50%;
+    height: 75%;
+    background: no-repeat center url('../img/message.svg');
+    left: 50%;
+    top: 50%;
+    margin-top: -15px;
+    transform: translate(-50%, -50%);
+    transition: left 0.7s ease-in-out;
+    &.slide-left {
+      left: -50%;
+    }
+  }
+  .explainer {
+    position: absolute;
+    top: 0;
+    left: 150%;
+    height: 100%;
+    width: 100%;
+    transition: left 0.7s ease-in-out;
+    transform: translateX(-50%)translateY(-12%);
+    &.centered {
+      left: 50%;
+    }
+    .explainerFlake {
+      width: 100%;
+    }
+    div.text-box {
+      position: absolute;
+      top: 92%;
+      text-align: center;
+      width: 100%;
+      font-size: 140%;
+      transition: opacity 0.6s ease-in-out;
+      z-index: 2;
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      max-width: 85%;
+      z-index: 0;
+    }
+    .arrow {
+      z-index: 2;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      background: no-repeat center url('../img/arrow.svg');
+      height: 2.5em;
+      width: 2.5em;
+    }
+    .next-button {
+      right: 5%;
+      transform: rotate(180deg);
+      &.faded {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    .back-button {
+      left: 5%;
+    }
+    .making-image {
+      background-image: url('../img/holiday_cards.jpg');
+      background-size: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.6s ease-in-out;
+      z-index: 1;
+      border-radius: 50%;
+    }
+  }
+}
+
+.buttons {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  div {
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 0 1px;
+    padding: 1px 4px;
+    display: inline;
+    &:hover {
+      color: red;
+      border: 1px solid red;
+    }
+  }
+}
+
+@media screen and (max-width : 500px), screen and (max-height: 450px) {
+ body {
+   font-size: 12px;
+ }
+ .buttons {
+   margin-bottom: 10px;
+ }
+ .background .explainer div.text-box {
+   top: 88%;
+   font-size: 120%;
+ }
+}

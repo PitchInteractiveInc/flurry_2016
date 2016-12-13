@@ -1,0 +1,43 @@
+{
+  "name": "Untitled",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --progress --colors",
+    "production": "webpack -p --progress --colors",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host 0.0.0.0 --port 8000",
+    "start": "npm run dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "csv-loader": "^2.0.1",
+    "d3-array": "^1.0.2",
+    "d3-interpolate": "^1.1.1",
+    "d3-polygon": "^1.0.1",
+    "d3-selection": "^1.0.2",
+    "d3-scale": "^1.0.3",
+    "d3-shape": "^1.0.3",
+    "d3-transition": "^1.0.3",
+    "file-saver": "^1.3.3",
+    "hammerjs": "^2.0.8",
+    "jszip": "^3.1.3",
+    "seedrandom": "^2.4.2",
+    "stats.js": "^0.17.0"
+  }
+}
